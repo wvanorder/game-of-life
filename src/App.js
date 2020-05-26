@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
 
+import Grid from './grid/grid'
+
 function App() {
   return (
-    <div className="App">
-      The first commit
-    </div>
+    <>
+      <Grid />
+    </>
   );
 }
 

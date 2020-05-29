@@ -6,6 +6,10 @@ const Cell = props => {
         <div
             key ={`${props.i}-${props.j}`}
             onClick={() => {
+            //if the simulation is running, don't do anything on click
+            if (props.running) {
+                return;
+            }
             const newGrid = produce(props.grid, grid2 => {
                 grid2[props.i][props.j] = props.grid[props.i][props.j] ? 0 : 1;
             })
